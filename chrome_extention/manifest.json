@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "HTML Injector Extension",
+  "version": "1.0",
+  "description": "Adds some HTML elements to the current page.",
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "permissions": ["activeTab", "storage"]
+}
